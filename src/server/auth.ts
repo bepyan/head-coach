@@ -2,6 +2,7 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import { type GetServerSidePropsContext } from 'next';
 import { getServerSession, type NextAuthOptions, type DefaultSession } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import SlackProvider from 'next-auth/providers/slack';
 import DiscordProvider from 'next-auth/providers/discord';
 import NaverProvider from 'next-auth/providers/naver';
 import KakaoProvider from 'next-auth/providers/kakao';
@@ -41,6 +42,10 @@ export const authOptions: NextAuthOptions = {
         },
       },
     }),
+    SlackProvider({
+      clientId: env.SLACK_CLIENT_ID,
+      clientSecret: env.SLACK_CLIENT_SECRET,
+    }),
     DiscordProvider({
       clientId: env.DISCORD_CLIENT_ID,
       clientSecret: env.DISCORD_CLIENT_SECRET,
@@ -62,7 +67,8 @@ export const authOptions: NextAuthOptions = {
       clientSecret: env.KAKAO_CLIENT_SECRET,
       style: {
         logo: 'https://developers.kakao.com/tool/resource/static/img/button/kakaotalksharing/kakaotalk_sharing_btn_small.png',
-        logoDark: 'https://www.kakaocorp.com/page/favicon.ico',
+        logoDark:
+          'https://developers.kakao.com/tool/resource/static/img/button/kakaotalksharing/kakaotalk_sharing_btn_small.png',
         bgDark: '#FEE500',
         bg: '#FEE500',
         text: '#000000',
