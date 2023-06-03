@@ -2,7 +2,7 @@
 const path = require('path');
 
 /** @type {import("eslint").Linter.Config} */
-const config = {
+module.exports = {
   overrides: [
     {
       extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
@@ -29,5 +29,3 @@ const config = {
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
   },
 };
-
-module.exports = config;
