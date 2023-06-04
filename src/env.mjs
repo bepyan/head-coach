@@ -29,6 +29,8 @@ export const env = createEnv({
     NAVER_CLIENT_SECRET: z.string(),
     KAKAO_CLIENT_ID: z.string(),
     KAKAO_CLIENT_SECRET: z.string(),
+    SLACK_SIGNING_SECRET: z.string(),
+    SLACK_BOT_TOKEN: z.string(),
   },
 
   /**
@@ -59,6 +61,8 @@ export const env = createEnv({
     NAVER_CLIENT_SECRET: process.env.NAVER_CLIENT_SECRET,
     KAKAO_CLIENT_ID: process.env.KAKAO_CLIENT_ID,
     KAKAO_CLIENT_SECRET: process.env.KAKAO_CLIENT_SECRET,
+    SLACK_SIGNING_SECRET: process.env.SLACK_SIGNING_SECRET,
+    SLACK_BOT_TOKEN: process.env.SLACK_BOT_TOKEN,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation.

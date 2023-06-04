@@ -3,15 +3,6 @@ const path = require('path');
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  overrides: [
-    {
-      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
-      files: ['*.ts', '*.tsx'],
-      parserOptions: {
-        project: path.join(__dirname, 'tsconfig.json'),
-      },
-    },
-  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: path.join(__dirname, 'tsconfig.json'),
@@ -28,4 +19,13 @@ module.exports = {
     ],
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
   },
+  overrides: [
+    {
+      extends: ['plugin:@typescript-eslint/recommended-requiring-type-checking'],
+      files: ['*.ts', '*.tsx'],
+      parserOptions: {
+        project: path.join(__dirname, 'tsconfig.json'),
+      },
+    },
+  ],
 };
