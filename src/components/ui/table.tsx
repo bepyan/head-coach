@@ -18,7 +18,7 @@ export const TableHeader = React.forwardRef<
 ));
 TableHeader.displayName = 'TableHeader';
 
-const TableBody = React.forwardRef<
+export const TableBody = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (

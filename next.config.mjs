@@ -22,7 +22,7 @@ const config = {
     return [
       {
         source: '/me',
-        destination: '/me/home',
+        destination: '/me/dashboard',
         permanent: true,
       },
     ];

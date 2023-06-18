@@ -7,6 +7,7 @@ interface PageSidebarProps extends React.HTMLAttributes<HTMLElement> {
   items: {
     href: string;
     title: string;
+    description?: string;
   }[];
 }
 
