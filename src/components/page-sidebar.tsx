@@ -26,9 +26,9 @@ export default function PageSidebar({ className, items, ...props }: PageSidebarP
           className={cn(
             buttonVariants({ variant: 'ghost' }),
             pathname === item.href
-              ? 'bg-muted hover:bg-muted'
-              : 'hover:bg-transparent hover:underline',
-            'justify-start',
+              ? 'font-semibold'
+              : 'font-normal text-muted-foreground hover:text-foreground',
+            'justify-start hover:bg-muted',
           )}
         >
           {item.title}

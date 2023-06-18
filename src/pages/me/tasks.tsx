@@ -1,5 +1,6 @@
 import PageLayout from '~/components/page-layout';
 import { TaskTable, type Task } from '~/components/tables/task-table';
+import { TaskForm } from '~/components/task-form';
 
 function getData(): Task[] {
   // Fetch data from your API here.
@@ -19,6 +20,9 @@ export default function TasksPage() {
 
   return (
     <PageLayout>
+      <div>
+        <TaskForm />
+      </div>
       <div>
         <TaskTable data={data} />
       </div>
